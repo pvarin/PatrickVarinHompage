@@ -1,0 +1,10 @@
+doctype html
+html(lang='en')
+	head
+		title= pageTitle
+		link(rel='stylesheet' href='../assets/main.css')
+		script.
+			var entrypoint='#{entrypoint}';
+	body
+		div(id='content')
+		script(src='../build/main.js')

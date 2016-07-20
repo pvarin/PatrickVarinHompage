@@ -10,5 +10,5 @@ gulp.task('build', function() {
 		}).transform(babelify, {presets:['es2015','react'], extensions:['.babel']})
 		.bundle()
 		.pipe(source('main.js'))
-		.pipe(gulp.dest('./build/'));
+		.pipe(gulp.dest('./public/build/'));
 });
