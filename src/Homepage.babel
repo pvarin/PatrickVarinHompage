@@ -1,11 +1,6 @@
-// packages
-import React from 'react';
-import ReactDOM from 'react-dom';
-
-// Custom React Components
+import React, { Component } from 'react';
 import {TopNav} from './TopNav.babel';
 import {Header} from './Header.babel';
-
 
 var nav_data = {
 	home_link : 'PV',
@@ -22,10 +17,13 @@ var header_data = {
 	subtitle : 'A brief history of myself'
 };
 
-ReactDOM.render(
-	(<div>
-		<TopNav data={nav_data} />
-	 	<Header data={header_data} />
-	 </div>),
-	document.getElementById('content')
-);
+export class Homepage extends Component {
+	render() {
+		return (
+			<div>
+				<TopNav data={nav_data} />
+			 	<Header data={header_data} />
+			</div>
+		);
+	}
+}
