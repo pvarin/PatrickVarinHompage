@@ -1,0 +1,26 @@
+{
+  "name": "patrick-varin-homepage",
+  "version": "1.0.0",
+  "description": "My personal homepage",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^15.2.1"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
+    "gulp": "^3.9.1",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Patrick Varin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:pvarin/PatrickVarinHompage.git"
+  }
+}

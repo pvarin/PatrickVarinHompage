@@ -1,0 +1,29 @@
+
+import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
+import {TopNav} from './TopNav.babel';
+import {Header} from './Header.babel';
+
+var nav_data = {
+	home_link : 'PV',
+	item_list : [
+		{title : 'About', url: 'about.html'},
+		{title : 'Projects', url: 'about.html'},
+		{title : 'Stats', url: 'stats.html'},
+		{title : 'Timeline', url: 'timeline.html'}
+	]
+};
+
+var header_data = {
+	title : 'Timeline',
+	subtitle : 'A brief history of myself'
+};
+
+
+ReactDOM.render(
+	(<div>
+		<TopNav data={nav_data} />
+	 	<Header data={header_data} />
+	 </div>),
+	document.getElementById('content')
+);

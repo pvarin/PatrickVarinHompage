@@ -1,0 +1,47 @@
+import React, { Component } from 'react';
+
+export class TopNav extends Component {
+	render() {
+		// build the list of nav items
+		var items = [];
+		for (var item of this.props.data['item_list']){
+			items.push(<NavItem url={item.url} title={item.title} key={item.title}/>);
+		}
+
+		return (
+			<div className='navbar'>
+				<NavHome text={this.props.data['home_link']}/>
+				<NavList>
+					{items}
+				</NavList>
+			</div>
+		);
+	}
+}
+
+class NavHome extends Component {
+	render() {
+		// TODO: replace the initials with an image
+		return(
+			<a className='nav-home' href='/'>{this.props.text}</a>
+		);
+	}
+}
+
+class NavList extends Component {
+	render() {
+		return (
+			<ul className='nav-list'>
+				{this.props.children}
+			</ul>
+		);
+	}
+}
+
+class NavItem extends Component {
+	render() {
+		return (
+			<li><a href={this.props.url}>{this.props.title}</a></li>
+		);
+	}
+}
